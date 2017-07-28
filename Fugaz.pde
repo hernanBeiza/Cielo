@@ -4,14 +4,14 @@ class Fugaz extends Estrella {
   Fugaz(){
     this.x = random(0,800);
     this.y = random(0,0);
-    this.velocidad = random(50,100);
+    this.velocidad = random(10,15);
     this.miColor = color(255,255,0);
   }
   
   void draw(){
+    super.draw();  
     this.y+=this.velocidad;
     this.x-=this.velocidad;
-    super.draw();  
     this.limitar();
   }
   

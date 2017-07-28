@@ -1,13 +1,13 @@
 ArrayList estrellas;
 ArrayList fugaces;
 
-String version="0.0.1";
+String version="0.0.2";
 
 void setup(){
   size(600,600);
   
   fugaces = new ArrayList<Fugaz>();  
-  for(int i=0;i<10;i++){
+  for(int i=0;i<6;i++){
     Fugaz fugaz = new Fugaz();
     fugaces.add(fugaz);      
   }
@@ -26,12 +26,10 @@ void draw(){
     Estrella unaEstrella = (Estrella)estrellas.get(i);
     unaEstrella.draw();
   }
-  /*
   for(int i=0;i<fugaces.size();i++){
     Fugaz fugaz = (Fugaz)fugaces.get(i);
     fugaz.draw();
   }
-  */
   saveFrame("frames/"+version+"/"+version+"####.tif");  
 }
   
